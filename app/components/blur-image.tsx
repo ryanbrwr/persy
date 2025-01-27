@@ -31,13 +31,17 @@ export function BlurImage({
   const nextIndex = (currentIndex + 1) % images.length;
 
   return (
-    <div className=" w-full aspect-[2/1] object-cover max-h-[55vh] relative overflow-hidden">
+    <div
+      className="relative w-full overflow-hidden"
+      style={{ aspectRatio: "2/1", maxHeight: "55vh" }}
+    >
       {/* Current Image */}
       <Image
         key={currentIndex}
         src={images[currentIndex].src}
         alt={images[currentIndex].alt}
         fill
+        sizes="100vw"
         className={`object-cover ${isTransitioning ? "animate-blur-out" : ""}`}
         priority
       />
@@ -49,6 +53,7 @@ export function BlurImage({
           src={images[nextIndex].src}
           alt={images[nextIndex].alt}
           fill
+          sizes="100vw"
           className="object-cover animate-blur-in"
         />
       )}
