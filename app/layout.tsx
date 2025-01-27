@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ryan Brewer - Software Engineer & Designer",
-  description: "Forging Rare Earch Metals",
+  description: "Forging Rare Earth Metals",
   metadataBase: new URL("https://ryanbrewer.me"),
   openGraph: {
     images: [
